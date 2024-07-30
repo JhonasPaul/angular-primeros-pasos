@@ -1,0 +1,21 @@
+<h1>DBZ Personajes</h1>
+<hr/>
+<div class="row">
+  <!--listar-->
+  <div class="col">
+    <!--<dbz-list> es el selecetor del componente hijo,
+    [characterList] es la propiedad(objeto) del component hijo,
+    characters es la propiedad(objeto)del padre -->
+    <dbz-list [characterList]="characters" (onDeleteId)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+
+  <!--agregar-->
+  <div class="col">
+    <!--<dbz-add-character> es el selector del componente hijo,
+    (onNewCharacter) propiedad del component hijo,
+    onNewCharacter($event) propiedad del component padre-->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+
+  </div>
+</div>
+
